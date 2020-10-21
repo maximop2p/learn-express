@@ -1,10 +1,12 @@
 const express = require('express');
 const path = require('path');
 const logger = require('./middleware/logger');
-
+const handle = require('express-handlebars');
 const app = express();
 
-
+// handlebars middleware
+app.engine('handlebars', handle({defaultLayout: "main"}));
+app.set('view engine', 'handlebars');
 
 //app.use(logger);
 

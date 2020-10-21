@@ -27,6 +27,7 @@ router.post('/', (req, res) => {
     }
 
     if(!req.body.name || !req.body.email) {
+        res.redirect('/');
         return res.status(400).json({ msg: 'please include a nme and email.'});
     }
 

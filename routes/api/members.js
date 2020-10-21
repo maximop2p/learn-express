@@ -31,7 +31,8 @@ router.post('/', (req, res) => {
     }
 
     members.push(new_member);
-    res.json(members);
+    //res.json(members);
+    res.redirect('/');
 });
 
 //update member

@@ -4,6 +4,7 @@ const logger = require('./middleware/logger');
 const handle = require('express-handlebars');
 const app = express();
 const members = require('./member_list');
+
 // handlebars middleware
 app.engine('handlebars', handle({defaultLayout: "main"}));
 app.set('view engine', 'handlebars');
